@@ -3,9 +3,8 @@
 #include <stdlib.h>
 
 
-int main()
-{
-    // QUEUE DONE
+int main() {
+    // QUEUE
 
     // Queue * front;
     // front = CreateQueue(5);
@@ -23,18 +22,18 @@ int main()
     // second = dequeue(second);
     // displayQueue(second);
 
-    // STACK DONE
+    // STACK
 
-    Stack *p1 = CreateStack(4);
-    p1 = push(p1, 3);
-    p1 = push(p1, 9);
-    p1 = pop(p1);
-    displayStack(p1);
-    Stack *p2 = CreateStack(8);
-    p2 = push(p2, 4);
-    p2 = push(p2, 8);
-    displayStack(p2);
-    peek(p2, -1);
+    // Stack *p1 = CreateStack(4);
+    // p1 = push(p1, 3);
+    // p1 = push(p1, 9);
+    // p1 = pop(p1);
+    // displayStack(p1);
+    // Stack *p2 = CreateStack(8);
+    // p2 = push(p2, 4);
+    // p2 = push(p2, 8);
+    // displayStack(p2);
+    // peek(p2, -1);
 
     // push(1);
     // push(2);
@@ -42,7 +41,7 @@ int main()
     // pop();
     // displayStack();
 
-    // // LinkdedList
+    // LinkdedList
 
     //
     //    ll *stnode;
@@ -56,9 +55,9 @@ int main()
     //    second=deleteAtHeadll(second);
     //    insertAtEndll(8,second);
     //    insertAtIndexll(9,1,second);
-    // //    deleteAtIndexll(1,second);
-    // //    deleteAtlastll(second);  
-    // //    deleteAtvaluell(9,second);
+    //    deleteAtIndexll(1,second);
+    //    deleteAtlastll(second);  
+    //    deleteAtvaluell(9,second);
     //     displayll(second);
     
     
