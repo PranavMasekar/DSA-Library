@@ -4,7 +4,7 @@
 
 
 int main() {
-    // QUEUE
+    // ***************************************  Queue  ****************************************** //
 
     // Queue * front;
     // front = CreateQueue(5);
@@ -22,7 +22,7 @@ int main() {
     // second = dequeue(second);
     // displayQueue(second);
 
-    // STACK
+    // ***************************************  Stack  ****************************************** //
 
     // Stack *p1 = CreateStack(4);
     // p1 = push(p1, 3);
@@ -35,20 +35,13 @@ int main() {
     // displayStack(p2);
     // peek(p2, -1);
 
-    // push(1);
-    // push(2);
-    // push(3);
-    // pop();
-    // displayStack();
+    // ***************************************  LinkedList  ****************************************** //
 
-    // LinkdedList
-
-    //
     //    ll *stnode;
     //    stnode= createllnode(6);
     //    insertAtEndll(8,stnode);
     //    displayll(stnode);
-    
+    //    printf("\n");
     //    ll *second;
     //    second= createllnode(6);
     //    second=insertAtHeadll(66,second);
@@ -57,12 +50,62 @@ int main() {
     //    insertAtIndexll(9,1,second);
     //    deleteAtIndexll(1,second);
     //    deleteAtlastll(second);  
+    //    insertAtEndll(9,second);
     //    deleteAtvaluell(9,second);
-    //     displayll(second);
+    //    displayll(second);
+    //    printf("\n");
     
-    
+    // ***************************************  Tree  ****************************************** //
 
+    // TreeNode* root;
+    // // Creation
+    // root = CreateBST(5);
+    // // Insertion
+    // InsertInBST(root,7);
+    // InsertInBST(root,2);
+    // InsertInBST(root,1);
+    // InsertInBST(root,18);
+    // InsertInBST(root,20);
 
+    // //Deletion
+    // root = DeleteInBST(root,1);
 
+    // //Display
+    // int arr[5] ={};
+    // printf("Inorder Traversal : \n");
+    // Inorder(root,arr);
+    // for(int i=0;i<5;i++){
+    //     printf("%d ",arr[i]);
+    // }
+    // printf("\n");
+    // printf("Preorder Traversal : \n");
+    // Preorder(root,arr);
+    // for(int i=0;i<5;i++){
+    //     printf("%d ",arr[i]);
+    // }
+    // printf("\n");
+    // printf("Postorder Traversal : \n");
+    // PostOrder(root,arr);
+    // for(int i=0;i<5;i++){
+    //     printf("%d ",arr[i]);
+    // }
+    // printf("\n");
+
+    // // Balance BST
+    // TreeNode* root2;
+    // root2 = CreateBST(50);
+    // InsertInBST(root2,40);
+    // InsertInBST(root2,30);
+    // InsertInBST(root2,20);
+    // InsertInBST(root2,10);
+    // root2 = BalanceBST(root2);
+    // int arr2[5] ={};
+    // Preorder(root2,arr2);
+    // for(int i=0;i<5;i++){
+    //     printf("%d ",arr2[i]);
+    // }
+    // printf("\n");
+
+    // ***************************************  Graph  ****************************************** //
     return 0;
 }

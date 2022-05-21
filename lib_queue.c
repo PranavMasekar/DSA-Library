@@ -26,6 +26,19 @@ void displayQueue(Queue *f)
     printf("\n");
 }
 
+int sizeOfQueue(Queue *f)
+{
+    int count = 0;
+    struct queue *ptr = f;
+    while (ptr != NULL)
+    {
+        count++;
+        ptr = ptr->next;
+    }
+    return count;
+}
+
+
 int isQueueEmpty(Queue *f)
 {
     if (f == NULL)
