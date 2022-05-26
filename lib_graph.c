@@ -7,7 +7,7 @@ typedef struct Graph{
 } Graph;
 // int a[20][20] = {};
 
-void Create(Graph* graph, int n)
+void CreateGraph(Graph* graph, int n)
 {
     int i,j;
     for (i = 0; i < n; i++)
