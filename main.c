@@ -112,7 +112,7 @@ int main() {
     scanf("%d", &n);
     Graph* graph;
     
-    Create(graph, n);
+    CreateGraph(graph, n);
     Display(graph, n);
 
     // BFS(a, 0, n);
