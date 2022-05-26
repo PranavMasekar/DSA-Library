@@ -107,15 +107,12 @@ int main() {
     // printf("\n");
 
     // ***************************************  Graph  ****************************************** //
-    int n;
-    printf("Enter the number of vertices ");
-    scanf("%d", &n);
-    Graph* graph;
+    // int n = 5;
+    // Graph* graph;
     
-    CreateGraph(graph, n);
-    Display(graph, n);
-    
-    BFS(graph, 0, n);
-    DFS(graph,0,n);
+    // CreateGraph(graph, n);
+    // Display(graph, n);
+    // BFS(graph, 0, n);
+    // DFS(graph,0,n);
     return 0;
 }
