@@ -107,5 +107,13 @@ int main() {
     // printf("\n");
 
     // ***************************************  Graph  ****************************************** //
+    int n;
+    printf("Enter the number of vertices ");
+    scanf("%d", &n);
+    Graph* graph;
+    Create(graph, n);
+    Display(graph, n);
+
+    // BFS(a, 0, n);
     return 0;
 }

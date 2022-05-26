@@ -2,28 +2,30 @@
 #define MAX 20
 
 int q[MAX], top = -1, front = -1, rear = -1, stack[MAX];
-int a[20][20] = {};
+typedef struct Graph{
+    int a[20][20];
+} Graph;
+// int a[20][20] = {};
 
-void Create(int *arr, int n)
+void Create(Graph* graph, int n)
 {
     int flag, v1, v2, choice;
     printf("Enter the type of the graph (1. Undirected ) (2. Directed ):");
     scanf("%d", &flag);
-
     do
     {
         printf("Enter the edge :");
         scanf("%d %d", &v1, &v2);
-        a[v1][v2] = 1;
+        graph->a[v1][v2] = 1;
         if (flag == 1)
         {
-            a[v2][v1] = 1;
+            graph->a[v2][v1] = 1;
         }
         printf("Enter do you want to continue :");
         scanf("%d", &choice);
     } while (choice == 1);
 }
-void Display(int a[20][20], int n)
+void Display(Graph* graph, int n)
 {
     int i, j;
     printf("\nAdjacency matrix \n");
@@ -31,7 +33,7 @@ void Display(int a[20][20], int n)
     {
         for (j = 0; j < n; j++)
         {
-            printf(" %d", a[i][j]);
+            printf(" %d", graph->a[i][j]);
         }
         printf("\n");
     }
@@ -66,21 +68,21 @@ void add(int item)
             q[++rear] = item;
     }
 }
-int isStackEmpty()
+int isstackempty()
 {
     if (top == -1)
         return 1;
     return 0;
 }
 
-void push(int item)
+void Push(int item)
 {
     if (top == MAX - 1)
         printf("Stack overflow ");
     else
         stack[++top] = item;
 }
-int pop()
+int Pop()
 {
     int k;
     if (top == -1)
@@ -119,40 +121,28 @@ void BFS(int a[20][20], int s, int n)
     }
     printf("\n");
 }
-void DFS(int a[20][20], int s, int n)
-{
-    int v1, v2, vis[MAX] = {};
-    push(s);
+// void DFS(int a[20][20], int s, int n)
+// {
+//     int v1, v2, vis[MAX] = {};
+//     Push(s);
 
-    while (!isStackEmpty())
-    {
-        v1 = pop();
-        if (vis[v1] != 1)
-        {
-            printf("%d ", v1);
-            vis[v1] = 1;
-        }
-        for (v2 = 0; v2 < n; v2++)
-        {
-            if ((a[v1][v2] != 0) && (vis[v2] == 0))
-            {
-                push(v2);
-            }
-        }
+//     while (!isstackempty())
+//     {
+//         v1 = Pop();
+//         if (vis[v1] != 1)
+//         {
+//             printf("%d ", v1);
+//             vis[v1] = 1;
+//         }
+//         for (v2 = 0; v2 < n; v2++)
+//         {
+//             if ((a[v1][v2] != 0) && (vis[v2] == 0))
+//             {
+//                 Push(v2);
+//             }
+//         }
         
-    }
-    printf("\n");
-}
-void main()
-{
-    int n;
-    printf("Enter the number of vertices ");
-    scanf("%d", &n);
+//     }
+//     printf("\n");
+// }
 
-    Create(a, n);
-    Display(a, n);
-
-    BFS(a, 0, n);
-    DFS(a, 0, n);
-    return 0;
-}
