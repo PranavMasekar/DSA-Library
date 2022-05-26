@@ -114,7 +114,8 @@ int main() {
     
     CreateGraph(graph, n);
     Display(graph, n);
-
-    // BFS(a, 0, n);
+    
+    BFS(graph, 0, n);
+    DFS(graph,0,n);
     return 0;
 }

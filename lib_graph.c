@@ -5,7 +5,6 @@ int q[MAX], top = -1, front = -1, rear = -1, stack[MAX];
 typedef struct Graph{
     int a[20][20];
 } Graph;
-// int a[20][20] = {};
 
 void CreateGraph(Graph* graph, int n)
 {
@@ -108,7 +107,7 @@ int is_queue_empty()
         return 1;
     return 0;
 }
-void BFS(int a[20][20], int s, int n)
+void BFS(Graph* graph, int s, int n)
 {
     int v1, v2, i, vis[MAX] = {};
     add(s);
@@ -117,10 +116,10 @@ void BFS(int a[20][20], int s, int n)
     while (!is_queue_empty())
     {
         v1 = delete ();
-        printf(" %d", v1);
+        printf("%d ", v1);
         for (v2 = 0; v2 < n; v2++)
         {
-            if ((a[v1][v2] != 0) && (vis[v2] == 0))
+            if ((graph->a[v1][v2] != 0) && (vis[v2] == 0))
             {
                 add(v2);
                 vis[v2] = 1;
@@ -129,28 +128,26 @@ void BFS(int a[20][20], int s, int n)
     }
     printf("\n");
 }
-// void DFS(int a[20][20], int s, int n)
-// {
-//     int v1, v2, vis[MAX] = {};
-//     Push(s);
+void DFS(Graph* graph, int s, int n)
+{
+    int v1, v2, vis[MAX] = {0};
+    Push(s);
 
-//     while (!isstackempty())
-//     {
-//         v1 = Pop();
-//         if (vis[v1] != 1)
-//         {
-//             printf("%d ", v1);
-//             vis[v1] = 1;
-//         }
-//         for (v2 = 0; v2 < n; v2++)
-//         {
-//             if ((a[v1][v2] != 0) && (vis[v2] == 0))
-//             {
-//                 Push(v2);
-//             }
-//         }
-        
-//     }
-//     printf("\n");
-// }
-
+    while (!isstackempty())
+    {
+        v1 = Pop();
+        if (vis[v1] != 1)
+        {
+            printf("%d ", v1);
+            vis[v1] = 1;
+        }
+        for (v2 = 0; v2 < n; v2++)
+        {
+            if ((graph->a[v1][v2] != 0) && (vis[v2] == 0))
+            {
+                Push(v2);
+            }
+        }
+    }
+    printf("\n");
+}
