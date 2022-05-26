@@ -9,6 +9,11 @@ typedef struct Graph{
 
 void Create(Graph* graph, int n)
 {
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;i<n;j++){
+    //         graph->a[i][j] = 0;
+    //     }
+    // }
     int flag, v1, v2, choice;
     printf("Enter the type of the graph (1. Undirected ) (2. Directed ):");
     scanf("%d", &flag);

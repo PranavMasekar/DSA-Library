@@ -111,6 +111,7 @@ int main() {
     printf("Enter the number of vertices ");
     scanf("%d", &n);
     Graph* graph;
+    
     Create(graph, n);
     Display(graph, n);
 
