@@ -2,6 +2,7 @@
 #define MAX 20
 
 int q[MAX], top = -1, front = -1, rear = -1, stack[MAX];
+int vis[20] = {0};
 typedef struct Graph{
     int a[20][20];
 } Graph;
@@ -128,26 +129,20 @@ void BFS(Graph* graph, int s, int n)
     }
     printf("\n");
 }
+void DFSHelper(Graph* graph,int source ,int n){
+    vis[source] = 1;
+    printf("%d ", source);
+    int v1 = source,v2;
+     for (v2 = 0; v2 < n; v2++) {
+            if ((graph->a[v1][v2] != 0) && (vis[v2] == 0)) DFSHelper(graph,v2,n);
+        }
+}
 void DFS(Graph* graph, int s, int n)
 {
-    int v1, v2, vis[MAX] = {0};
-    Push(s);
-
-    while (!isstackempty())
+    for (int i = 0; i < n; i++)
     {
-        v1 = Pop();
-        if (vis[v1] != 1)
-        {
-            printf("%d ", v1);
-            vis[v1] = 1;
-        }
-        for (v2 = 0; v2 < n; v2++)
-        {
-            if ((graph->a[v1][v2] != 0) && (vis[v2] == 0))
-            {
-                Push(v2);
-            }
-        }
+        vis[i] = 0;
     }
+    DFSHelper(graph,s,n);
     printf("\n");
 }
