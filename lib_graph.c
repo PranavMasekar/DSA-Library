@@ -9,6 +9,8 @@ typedef struct Graph{
 
 void CreateGraph(Graph* graph, int n)
 {
+    Graph* temp = (Graph*)malloc(sizeof(Graph));
+    graph = temp;
     int i,j;
     for (i = 0; i < n; i++)
     {
