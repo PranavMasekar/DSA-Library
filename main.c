@@ -108,7 +108,7 @@ int main() {
 
     // ***************************************  Graph  ****************************************** //
     // int n = 5;
-    // Graph* graph;
+    // Graph* graph = (Graph*)malloc(sizeof(Graph));
     
     // CreateGraph(graph, n);
     // Display(graph, n);
